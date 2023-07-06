@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disable Right-Click and Copy/Paste</title>
+
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+        // Disable copy and paste
+        document.addEventListener('keydown', function (e) {
+            // Check for Ctrl key or Command key (for Mac)
+            if (e.ctrlKey || e.metaKey) {
+                var key = String.fromCharCode(e.keyCode || e.charCode);
+                // Check for 'C' for copy or 'V' for paste
+                if (key === 'C' || key === 'V') {
+                    e.preventDefault();
+                }
+            }
+        });
+
+        var count=0;
+                document.addEventListener("visibilitychange", function() {
+                    if (document.visibilityState === 'visible') {
+                      console.log("Tab is now visible.");
+                    } else {
+            alert("Tab is now hidden.");
+            count++;
+            console.log(count);
+                    }
+            });
+                  
+                
+        
+            
+    </script>
+</head>
+<body>
+    <textarea rows="10" cols="50" placeholder="type here"></textarea>
+    <h1>Disable Right-Click and Copy/Paste Example</h1>
+    <p>This is an example paragraph.</p>
+</body>
+</html>

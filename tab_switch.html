@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        switch
+    </h1>
+    <script>
+        var count=0;
+        document.addEventListener("visibilitychange", function() {
+            if (document.visibilityState === 'visible') {
+              console.log("Tab is now visible.");
+            } else {
+    alert("Tab is now hidden.");
+    count++;
+    console.log(count);
+            }
+          });
+          
+        
+
+    </script>
+    
+</body>
+</html>
